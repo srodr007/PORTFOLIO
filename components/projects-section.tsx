@@ -27,27 +27,27 @@ export default function ProjectsSection() {
 
   const projectImages = [
     {
-      src: "/imagen_movilidad.PNG",
+      src: "/imagen_movilidad.png",
       alt: "Patient mobility dashboard showing location clusters",
       caption: "Patient mobility dashboard visualizing daily location clusters and movements",
     },
     {
-      src: "/imagen_casa.PNG",
+      src: "/imagen_casa.png",
       alt: "Home and work location detection dashboard",
       caption: "Dashboard showing detected home and work locations based on time patterns",
     },
     {
-      src: "/index_mobility.PNG",
+      src: "/index_mobility.png",
       alt: "Mobility index visualization",
       caption: "Time series visualization of user mobility index over time",
     },
     {
-      src: "/entropia.PNG",
+      src: "/entropia.png",
       alt: "Location entropy analysis",
       caption: "Heat map showing location entropy and most probable clusters by day and hour",
     },
     {
-      src: "/grafo.PNG",
+      src: "/grafo.png",
       alt: "Cluster graph showing routes between locations",
       caption: "Graph visualization of routes between detected location clusters",
     },
