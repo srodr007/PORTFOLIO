@@ -970,6 +970,527 @@ export default function ProjectsSection() {
               </div>
             </Card>
           </motion.div>
+          <motion.div
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card className="bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 shadow-sm overflow-hidden">
+              <div className="md:flex">
+                <div className="md:w-1/3 relative h-60 md:h-auto overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500 to-green-600 dark:from-green-600 dark:to-green-800">
+                    <div className="absolute inset-0 opacity-30 mix-blend-overlay">
+                      <svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                          <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.5" opacity="0.3" />
+                          </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                      </svg>
+                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <Brain className="h-24 w-24 text-white/30" />
+                    </div>
+                  </div>
+                </div>
+                <CardContent className="p-6 md:w-2/3">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-100">
+                      Sustained Recycling: AI-Powered Waste Classification
+                    </h3>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors">
+                          <Maximize2 className="h-5 w-5" />
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[900px] bg-white dark:bg-gray-800 max-h-[90vh] overflow-y-auto">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl text-gray-800 dark:text-gray-100">
+                            Sustained Recycling: AI-Powered Waste Classification System
+                          </DialogTitle>
+                          <DialogDescription className="text-gray-600 dark:text-gray-400">
+                            Deep Learning Project for Waste Management and Recycling
+                          </DialogDescription>
+                        </DialogHeader>
+
+                        <Tabs defaultValue="overview" className="mt-6">
+                          <TabsList className="grid w-full grid-cols-5">
+                            <TabsTrigger value="overview">Overview</TabsTrigger>
+                            <TabsTrigger value="methodology">Methodology</TabsTrigger>
+                            <TabsTrigger value="results">Results</TabsTrigger>
+                            <TabsTrigger value="demo">Demo</TabsTrigger>
+                            <TabsTrigger value="tech">Technologies</TabsTrigger>
+                          </TabsList>
+
+                          <TabsContent value="overview" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Project Overview</h4>
+                              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                                This project developed an innovative system that uses deep learning to classify waste items and recommend the appropriate recycling bin. The system analyzes uploaded images of items destined for disposal, classifies them into waste categories, and provides guidance on proper disposal methods.
+                              </p>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The technology aims to bridge the gap between users' intentions to recycle and their uncertainty about proper waste disposal, particularly helping elderly individuals who may struggle with modern recycling practices.
+                              </p>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Problem Statement</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The main challenge was creating an accurate and efficient system for waste classification that could handle various types of items and provide reliable recommendations for proper disposal. Key challenges included:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Handling a diverse dataset of waste items</li>
+                                <li>Ensuring accurate classification across multiple categories</li>
+                                <li>Creating a user-friendly interface for image upload and classification</li>
+                                <li>Providing clear and accurate recycling recommendations</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Objectives</h4>
+                              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Develop an accurate image classification system for waste items</li>
+                                <li>Create a user-friendly interface for image upload and classification</li>
+                                <li>Provide clear recycling recommendations based on classification results</li>
+                                <li>Optimize the model for real-world application</li>
+                                <li>Contribute to environmental sustainability through improved recycling practices</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="methodology" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Data Collection and Preprocessing</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The project utilized a comprehensive dataset from Kaggle, categorized into 12 waste types:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Battery</li>
+                                <li>Biological</li>
+                                <li>Brown-glass</li>
+                                <li>Cardboard</li>
+                                <li>Clothes</li>
+                                <li>Green-glass</li>
+                                <li>Metal</li>
+                                <li>Paper</li>
+                                <li>Plastic</li>
+                                <li>Shoes</li>
+                                <li>Trash</li>
+                                <li>White-glass</li>
+                              </ul>
+                              <p className="text-gray-700 dark:text-gray-300 mt-2">
+                                The dataset was enhanced through:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Removal of duplicate images</li>
+                                <li>Addition of new images using Google Custom Search</li>
+                                <li>Data augmentation (40% increase) with rotations and zoom variations</li>
+                                <li>Structured organization into a dataframe for efficient processing</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Model Development</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The project experimented with multiple architectures before settling on EfficientNetB0:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Initial testing with ResNet50 (89.37% accuracy)</li>
+                                <li>Exploration of VGG19, MobileNetV2, MobileNetV3, and DenseNet</li>
+                                <li>Final implementation using EfficientNetB0 with custom layers</li>
+                                <li>Model configuration with Dropout (0.5), Global Average Pooling 2D, and Dense layer (1024)</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="results" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Model Performance</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The final EfficientNetB0 model achieved:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>90.28% accuracy after 10 epochs</li>
+                                <li>Robust performance across all waste categories</li>
+                                <li>Fast inference time (25-36ms per image)</li>
+                                <li>Reliable classification of real-world waste items</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Real-World Applications</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The system demonstrated practical effectiveness in:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Accurate classification of household items</li>
+                                <li>Clear recommendations for proper disposal</li>
+                                <li>User-friendly interface for image upload and classification</li>
+                                <li>Potential for integration into mobile applications</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="demo" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Demo Implementation</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The demo was implemented in Google Colab with the following features:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Interactive image upload interface</li>
+                                <li>Real-time classification of uploaded images</li>
+                                <li>Clear display of classification results</li>
+                                <li>Specific recycling bin recommendations</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Demo Results</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The demo successfully classified various items:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Shoes → Pink dumpster</li>
+                                <li>Cardboard → Blue dumpster</li>
+                                <li>White glass → Green dumpster</li>
+                                <li>Clothes → Pink dumpster</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="tech" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Technologies Used</h4>
+                              <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Deep Learning</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      TensorFlow
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Keras
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      EfficientNetB0
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      ResNet50
+                                    </Badge>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Data Processing</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Pandas
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      NumPy
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      OpenCV
+                                    </Badge>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Development</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Python
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Google Colab
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Google Custom Search API
+                                    </Badge>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Data Augmentation</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Image Rotation
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Zoom Variations
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Data Balancing
+                                    </Badge>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </TabsContent>
+                        </Tabs>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
+
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    Developed an AI-powered waste classification system using deep learning to help users properly recycle items. The system analyzes uploaded images, classifies waste into appropriate categories, and recommends the correct recycling bin. Achieved 90.28% accuracy using EfficientNetB0 architecture.
+                  </p>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">Python</Badge>
+                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">TensorFlow</Badge>
+                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">Deep Learning</Badge>
+                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">Computer Vision</Badge>
+                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">EfficientNetB0</Badge>
+                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">Data Augmentation</Badge>
+                  </div>
+
+                  <div className="flex justify-end">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <button className="text-green-600 dark:text-green-400 hover:text-green-800 dark:hover:text-green-300 transition-colors inline-flex items-center">
+                          View more details
+                          <ExternalLink className="w-4 h-4 ml-1" />
+                        </button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[900px] bg-white dark:bg-gray-800 max-h-[90vh] overflow-y-auto">
+                        <DialogHeader>
+                          <DialogTitle className="text-2xl text-gray-800 dark:text-gray-100">
+                            Sustained Recycling: AI-Powered Waste Classification System
+                          </DialogTitle>
+                          <DialogDescription className="text-gray-600 dark:text-gray-400">
+                            Deep Learning Project for Waste Management and Recycling
+                          </DialogDescription>
+                        </DialogHeader>
+
+                        <Tabs defaultValue="overview" className="mt-6">
+                          <TabsList className="grid w-full grid-cols-5">
+                            <TabsTrigger value="overview">Overview</TabsTrigger>
+                            <TabsTrigger value="methodology">Methodology</TabsTrigger>
+                            <TabsTrigger value="results">Results</TabsTrigger>
+                            <TabsTrigger value="demo">Demo</TabsTrigger>
+                            <TabsTrigger value="tech">Technologies</TabsTrigger>
+                          </TabsList>
+
+                          <TabsContent value="overview" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Project Overview</h4>
+                              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                                This project developed an innovative system that uses deep learning to classify waste items and recommend the appropriate recycling bin. The system analyzes uploaded images of items destined for disposal, classifies them into waste categories, and provides guidance on proper disposal methods.
+                              </p>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The technology aims to bridge the gap between users' intentions to recycle and their uncertainty about proper waste disposal, particularly helping elderly individuals who may struggle with modern recycling practices.
+                              </p>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Problem Statement</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The main challenge was creating an accurate and efficient system for waste classification that could handle various types of items and provide reliable recommendations for proper disposal. Key challenges included:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Handling a diverse dataset of waste items</li>
+                                <li>Ensuring accurate classification across multiple categories</li>
+                                <li>Creating a user-friendly interface for image upload and classification</li>
+                                <li>Providing clear and accurate recycling recommendations</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Objectives</h4>
+                              <ul className="list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Develop an accurate image classification system for waste items</li>
+                                <li>Create a user-friendly interface for image upload and classification</li>
+                                <li>Provide clear recycling recommendations based on classification results</li>
+                                <li>Optimize the model for real-world application</li>
+                                <li>Contribute to environmental sustainability through improved recycling practices</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="methodology" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Data Collection and Preprocessing</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The project utilized a comprehensive dataset from Kaggle, categorized into 12 waste types:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Battery</li>
+                                <li>Biological</li>
+                                <li>Brown-glass</li>
+                                <li>Cardboard</li>
+                                <li>Clothes</li>
+                                <li>Green-glass</li>
+                                <li>Metal</li>
+                                <li>Paper</li>
+                                <li>Plastic</li>
+                                <li>Shoes</li>
+                                <li>Trash</li>
+                                <li>White-glass</li>
+                              </ul>
+                              <p className="text-gray-700 dark:text-gray-300 mt-2">
+                                The dataset was enhanced through:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Removal of duplicate images</li>
+                                <li>Addition of new images using Google Custom Search</li>
+                                <li>Data augmentation (40% increase) with rotations and zoom variations</li>
+                                <li>Structured organization into a dataframe for efficient processing</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Model Development</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The project experimented with multiple architectures before settling on EfficientNetB0:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Initial testing with ResNet50 (89.37% accuracy)</li>
+                                <li>Exploration of VGG19, MobileNetV2, MobileNetV3, and DenseNet</li>
+                                <li>Final implementation using EfficientNetB0 with custom layers</li>
+                                <li>Model configuration with Dropout (0.5), Global Average Pooling 2D, and Dense layer (1024)</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="results" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Model Performance</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The final EfficientNetB0 model achieved:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>90.28% accuracy after 10 epochs</li>
+                                <li>Robust performance across all waste categories</li>
+                                <li>Fast inference time (25-36ms per image)</li>
+                                <li>Reliable classification of real-world waste items</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Real-World Applications</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The system demonstrated practical effectiveness in:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Accurate classification of household items</li>
+                                <li>Clear recommendations for proper disposal</li>
+                                <li>User-friendly interface for image upload and classification</li>
+                                <li>Potential for integration into mobile applications</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="demo" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Demo Implementation</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The demo was implemented in Google Colab with the following features:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Interactive image upload interface</li>
+                                <li>Real-time classification of uploaded images</li>
+                                <li>Clear display of classification results</li>
+                                <li>Specific recycling bin recommendations</li>
+                              </ul>
+                            </div>
+
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Demo Results</h4>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                The demo successfully classified various items:
+                              </p>
+                              <ul className="list-disc pl-5 mt-2 text-gray-700 dark:text-gray-300 space-y-1">
+                                <li>Shoes → Pink dumpster</li>
+                                <li>Cardboard → Blue dumpster</li>
+                                <li>White glass → Green dumpster</li>
+                                <li>Clothes → Pink dumpster</li>
+                              </ul>
+                            </div>
+                          </TabsContent>
+
+                          <TabsContent value="tech" className="mt-4 space-y-4">
+                            <div className="bg-gray-50 dark:bg-gray-700 p-4 rounded-lg">
+                              <h4 className="font-semibold text-gray-800 dark:text-gray-100 mb-2">Technologies Used</h4>
+                              <div className="grid grid-cols-2 gap-4">
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Deep Learning</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      TensorFlow
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Keras
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      EfficientNetB0
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      ResNet50
+                                    </Badge>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Data Processing</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Pandas
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      NumPy
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      OpenCV
+                                    </Badge>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Development</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Python
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Google Colab
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Google Custom Search API
+                                    </Badge>
+                                  </div>
+                                </div>
+
+                                <div>
+                                  <h5 className="font-medium text-gray-800 dark:text-gray-200 mb-2">Data Augmentation</h5>
+                                  <div className="flex flex-wrap gap-2">
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Image Rotation
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Zoom Variations
+                                    </Badge>
+                                    <Badge className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300">
+                                      Data Balancing
+                                    </Badge>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </TabsContent>
+                        </Tabs>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
+                </CardContent>
+              </div>
+            </Card>
+          </motion.div>
         </div>
       </div>
     </section>
