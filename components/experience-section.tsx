@@ -13,7 +13,7 @@ export default function ExperienceSection() {
           <Timeline>
             <TimelineItem
               date="January 2025 - Present"
-              title="Data & AI Engineer"
+              title="Generative AI Engineer"
               company="MissioIA"
               location="Madrid, Spain"
             >

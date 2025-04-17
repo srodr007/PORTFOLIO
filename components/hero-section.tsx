@@ -198,8 +198,7 @@ export default function HeroSection() {
 
   // Palabras para el efecto de typewriter
   const words = [
-    { text: "Data" },
-    { text: "&" },
+    { text: "Generative" },
     { text: "AI" },
     { text: "Engineer", className: "text-blue-500 dark:text-blue-400" },
   ]
