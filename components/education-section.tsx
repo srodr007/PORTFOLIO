@@ -44,11 +44,11 @@ export default function EducationSection() {
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <BookOpen className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 flex-shrink-0" />
-                    <p className="text-gray-700 dark:text-gray-300">2021 - Present</p>
+                    <p className="text-gray-700 dark:text-gray-300">2021 - 2025</p>
                   </div>
                   <div className="flex items-center">
                     <Award className="h-5 w-5 text-blue-500 dark:text-blue-400 mr-2 flex-shrink-0" />
-                    <p className="text-gray-700 dark:text-gray-300">GPA: 7.6/10</p>
+                    <p className="text-gray-700 dark:text-gray-300">GPA: 7.71/10</p>
                   </div>
 
                   <div>
@@ -148,7 +148,7 @@ export default function EducationSection() {
                 <div className="flex items-center mb-4">
                   <GraduationCap className="h-6 w-6 text-blue-500 dark:text-blue-400 mr-2" />
                   <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100">
-                    Computer Science (Exchange Student)
+                    Computer Science (Exchange Program)
                   </h4>
                 </div>
                 <div className="space-y-4">

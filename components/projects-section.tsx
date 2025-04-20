@@ -1238,7 +1238,7 @@ export default function ProjectsSection() {
                   </div>
 
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Developed an AI-powered waste classification system using deep learning to help users properly recycle items. The system analyzes uploaded images, classifies waste into appropriate categories, and recommends the correct recycling bin. Achieved 90.28% accuracy using EfficientNetB0 architecture.
+                    Developed a waste recognition system for UC using CNNs (EfficientNetB0) to classify discarded items and recommend appropriate recycling bins. Performed extensive data preprocessing (duplicate removal, augmentation, web scraping) to enhance dataset quality and model performance. Achieved 90.3% accuracy in the final model and evaluated multiple architectures (ResNet50, MobileNet, DenseNet) to select the best model.
                   </p>
 
                   <div className="flex flex-wrap gap-2 mb-4">

@@ -41,12 +41,6 @@ export default function Navbar() {
               About Me
             </Link>
             <Link
-              href="/experience"
-              className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
-            >
-              Experience
-            </Link>
-            <Link
               href="/education"
               className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
             >
@@ -111,13 +105,6 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Me
-              </Link>
-              <Link
-                href="/experience"
-                className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Experience
               </Link>
               <Link
                 href="/education"
